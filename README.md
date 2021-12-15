@@ -1,5 +1,12 @@
 # fort
 
+Guni's kubernetes app
+
+## Addons
+
+- Flux
+- Grafana
+- Prometheus
 
 ## Monitoring
 
@@ -18,4 +25,14 @@ flux create kustomization monitoring-stack \
   --path="./dev/monitoring/kube-prometheus-stack" \
   --health-check="Deployment/kube-prometheus-stack-operator.monitoring" \
   --health-check="Deployment/kube-prometheus-stack-grafana.monitoring"
+```
+
+Install Flux Grafana dashboards
+
+```
+flux create kustomization monitoring-config \
+  --interval=1h \
+  --prune=true \
+  --source=monitoring \
+  --path="./dev/monitoring/monitoring-config"
 ```
