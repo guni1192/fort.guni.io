@@ -36,3 +36,10 @@ flux create kustomization monitoring-config \
   --source=monitoring \
   --path="./dev/monitoring/monitoring-config"
 ```
+
+
+## Development
+
+```
+minikube start --nodes 3 --driver=docker
+```
