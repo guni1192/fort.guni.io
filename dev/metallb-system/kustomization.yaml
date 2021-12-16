@@ -1,0 +1,4 @@
+resources:
+  - metallb.yaml
+  - namespace.yaml
+  - configmap.yaml
