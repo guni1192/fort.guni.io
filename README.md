@@ -7,6 +7,10 @@ Guni's kubernetes app
 - Flux
 - Grafana
 - Prometheus
+- Tekton (TBD)
+- MetalLB (TBD)
+- Nginx Ingress (TBD)
+- Vault (TBD)
 
 ## Monitoring
 
