@@ -15,6 +15,7 @@ spec:
       labels:
         app: coredns
     spec:
+      hostNetowrk: true
       containers:
       - args:
         - -conf
