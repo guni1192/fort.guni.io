@@ -1,12 +1,11 @@
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   name: coredns
   labels:
     app: coredns
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: coredns
@@ -15,7 +14,7 @@ spec:
       labels:
         app: coredns
     spec:
-      hostNetowrk: true
+      hostNetwork: true
       containers:
       - args:
         - -conf
