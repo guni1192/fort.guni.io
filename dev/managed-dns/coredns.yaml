@@ -71,23 +71,9 @@ spec:
         - mountPath: /etc/coredns
           name: config-volume
           readOnly: true
-      dnsPolicy: Default
-      nodeSelector:
-        kubernetes.io/os: linux
-      priorityClassName: system-cluster-critical
       restartPolicy: Always
-      schedulerName: default-scheduler
       securityContext: {}
-      serviceAccount: coredns
-      serviceAccountName: coredns
       terminationGracePeriodSeconds: 30
-      tolerations:
-      - key: CriticalAddonsOnly
-        operator: Exists
-      - effect: NoSchedule
-        key: node-role.kubernetes.io/master
-      - effect: NoSchedule
-        key: node-role.kubernetes.io/control-plane
       volumes:
       - configMap:
           defaultMode: 420
