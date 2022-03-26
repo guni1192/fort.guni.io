@@ -118,7 +118,7 @@ metadata:
     app: coredns
   name: coredns
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
   - name: dns
     port: 53
