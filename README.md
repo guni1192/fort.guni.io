@@ -41,6 +41,11 @@ flux create kustomization monitoring-config \
   --path="./dev/monitoring/monitoring-config"
 ```
 
+```
+kubectl get secret --namespace monitoring kube-prometheus-stack-grafana -o jsonpath='{.data.admin-user}' | base64 -d 
+kubectl get secret --namespace monitoring kube-prometheus-stack-grafana -o jsonpath='{.data.admin-password}' | base64 -d 
+```
+
 
 ## Development
 
